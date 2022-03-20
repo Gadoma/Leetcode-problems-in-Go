@@ -13,6 +13,7 @@ func TestLongestCommonPrefix(t *testing.T) {
 		"array with empty string":     {input: []string{"flower", "flow", "flight", ""}, want: ""},
 		"array of different letters":  {input: []string{"a", "b", "c"}, want: ""},
 		"array of same letter":        {input: []string{"a", "a", "a"}, want: "a"},
+		"array of empty strings":      {input: []string{"", "", ""}, want: ""},
 	}
 
 	for name, testCase := range testCases {
