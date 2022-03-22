@@ -8,4 +8,5 @@ Golang solutions for leetcode problems
 |0014|Longest Common Prefix|Easy|[0014_longest-common-prefix](0014_longest-common-prefix)|
 |0020|Valid Parentheses|Easy|[0020_valid-parentheses](0020_valid-parentheses)|
 |0053|Maximum Subarray|Easy|[0053_maximum-subarray](0053_maximum-subarray)|
+|0121|Best Time to Buy and Sell Stock|Easy|[0121_best-time-to-buy-and-sell-stock](0121_best-time-to-buy-and-sell-stock)|
 |0217|Contains Duplicate|Easy|[0217_contains-duplicate](0217_contains-duplicate)|
