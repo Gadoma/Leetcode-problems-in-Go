@@ -10,6 +10,7 @@ Golang solutions for leetcode problems
 |0020|Valid Parentheses|Easy|[0020_valid-parentheses](0020_valid-parentheses)|
 |0053|Maximum Subarray|Easy|[0053_maximum-subarray](0053_maximum-subarray)|
 |0121|Best Time to Buy and Sell Stock|Easy|[0121_best-time-to-buy-and-sell-stock](0121_best-time-to-buy-and-sell-stock)|
+|0190|Reverse Bits|Easy|[0190_reverse-bits](0190_reverse-bits)|
 |0191|Number of 1 Bits|Easy|[0191_number-of-1-bits](0191_number-of-1-bits)|
 |0217|Contains Duplicate|Easy|[0217_contains-duplicate](0217_contains-duplicate)|
 |0268|Missing Number|Easy|[0268_missing-number](0268_missing-number)|
