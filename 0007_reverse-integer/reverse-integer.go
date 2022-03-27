@@ -1,40 +1,61 @@
 package goleetcode0007
 
-import (
-	"fmt"
-	"math"
-	"strconv"
-)
+import "math"
 
-func reverse(x int) int {
-	//convert to string and extract sign
-	runes := []rune(strconv.Itoa(x))
-	prefix := ""
-
-	if x < 0 {
-		prefix = "-"
-		runes = runes[1:]
+func intPow(n, m int) int {
+	if m == 0 {
+		return 1
 	}
 
-	// reverse order
-	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
-		runes[i], runes[j] = runes[j], runes[i]
+	result := n
+	for i := 2; i <= m; i++ {
+		result *= n
 	}
 
-	// check overflow
-	if len(string(runes)) > 10 {
-		return 0
-	}
-	value := prefix + fmt.Sprintf("%0*s", 10, string(runes))
-	if value > strconv.Itoa(math.MaxInt32) {
-		return 0
-	}
-	if x < 0 && value > strconv.Itoa(math.MinInt32) {
+	return result
+}
+
+func reverse(num int) int {
+	//special case
+	if num == 0 {
 		return 0
 	}
 
-	// convert back to signed number
-	ret, _ := strconv.Atoi(prefix + string(runes))
+	digits := []int{}
+	carry := num
+	negative := 1
+	result := 0
+	add := 0
 
-	return ret
+	// determine sign
+	if num < 0 {
+		carry *= -1
+		negative = -1
+	}
+
+	// get digits
+	for carry > 0 {
+		digits = append(digits, carry%10)
+		carry /= 10
+	}
+
+	// get number
+	j := len(digits) - 1
+	for i := 0; i < len(digits); i++ {
+		add = intPow(10, j) * digits[i]
+
+		if num > 0 && result+add > math.MaxInt32 {
+			return 0
+		}
+
+		if num < 0 && (result+add)*negative < math.MinInt32 {
+			return 0
+		}
+
+		result += add
+		j--
+	}
+
+	// return number with sign
+	return result * negative
 }
