@@ -1,14 +1,11 @@
 package goleetcode0191
 
-import "fmt"
-
 func hammingWeight(num uint32) int {
-	cnt := 0
-	str := fmt.Sprintf("%b", num)
-	for _, v := range str {
-		if v == 49 {
-			cnt++
-		}
+	var cnt uint32
+	for i := 0; i < 32; i++ {
+		cnt += 1 * (num % 2)
+		num = num / 2
 	}
-	return cnt
+
+	return int(cnt)
 }
