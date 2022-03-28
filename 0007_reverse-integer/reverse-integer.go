@@ -44,11 +44,11 @@ func reverse(num int) int {
 	for i := 0; i < len(digits); i++ {
 		add = intPow(10, j) * digits[i]
 
-		if num > 0 && result+add > math.MaxInt32 {
+		if num > 0 && result > math.MaxInt32-add {
 			return 0
 		}
 
-		if num < 0 && (result+add)*negative < math.MinInt32 {
+		if num < 0 && result*negative < math.MinInt32-add*negative {
 			return 0
 		}
 
