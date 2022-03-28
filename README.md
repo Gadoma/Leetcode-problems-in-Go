@@ -13,4 +13,5 @@ Golang solutions for leetcode problems
 |0190|Reverse Bits|Easy|[0190_reverse-bits](0190_reverse-bits)|
 |0191|Number of 1 Bits|Easy|[0191_number-of-1-bits](0191_number-of-1-bits)|
 |0217|Contains Duplicate|Easy|[0217_contains-duplicate](0217_contains-duplicate)|
+|0242|Valid Anagram|Easy|[0242_valid-anagram](0242_valid-anagram)|
 |0268|Missing Number|Easy|[0268_missing-number](0268_missing-number)|
